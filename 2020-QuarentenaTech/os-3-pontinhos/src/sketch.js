@@ -1,7 +1,12 @@
-function setup() {
+let boardX = 10;
+let boardY = 20;
 
+let pixelSize = 40;
+
+function setup() {
+  createCanvas(boardX * pixelSize, boardY * pixelSize);
 }
 
 function draw() {
-  // ellipse(50, 50, 80, 80);
+  background(50);
 }
