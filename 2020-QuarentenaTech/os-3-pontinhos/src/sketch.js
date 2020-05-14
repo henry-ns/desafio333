@@ -56,9 +56,14 @@ function setup() {
   createCanvas(boardX * pixelSize, boardY * pixelSize);
   rectMode(CENTER);
   piece = new Piece(random(shapes), width / 2 - pixelSize, 0, pixelSize);
+
+  setInterval(() => {
+    piece.y += pixelSize;
+  }, timeInterval);
 }
 
 function draw() {
   background(50);
   piece.show();
+  piece.update();
 }

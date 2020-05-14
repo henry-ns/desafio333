@@ -27,4 +27,15 @@ class Piece {
       x.filter((j) => j != null).forEach((pixel) => pixel.show())
     );
   }
+
+  update() {
+    this.shape.forEach((x, i) =>
+      x.forEach((e, j) => {
+        if (e) {
+          e.x = this.x + j * pixelSize;
+          e.y = this.y + i * pixelSize;
+        }
+      })
+    );
+  }
 }
